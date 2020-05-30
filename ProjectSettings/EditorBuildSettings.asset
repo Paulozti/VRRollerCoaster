@@ -9,5 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/level1.unity
     guid: af905a64ef68a4c4697a8b785bae8843
   m_configObjects:
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: f396a183d505feb46a768e8da3d29e04,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3b1f08b1f93c23e4eb3374dedba86f6f,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 2a5c9654a49dfe1438aab621d6627e1c,
       type: 2}
