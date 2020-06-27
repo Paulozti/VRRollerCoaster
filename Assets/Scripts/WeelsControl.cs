@@ -11,6 +11,8 @@ public class WeelsControl : MonoBehaviour
     public float brake;
     public AudioSource audiobrake;
     public AudioSource audiowheel;
+
+    public float weakBrakePower = 4000;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,14 @@ public class WeelsControl : MonoBehaviour
         audiobrake.Play();
         Invoke("Continue", 10);
     }
+    public void WeakBrake()
+    {
+        torque = 000.0001f;
+        brake = weakBrakePower;
+        audiobrake.Play();
+        Invoke("Continue", 1);
+    }
+
 
     void Continue()
     {

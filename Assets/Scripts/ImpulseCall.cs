@@ -5,6 +5,7 @@ using UnityEngine;
 public class ImpulseCall : MonoBehaviour
 {
     public bool brake = false;
+    public bool WeakBrake = false;
     public AudioSource sound;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,14 @@ public class ImpulseCall : MonoBehaviour
 
             if (brake)
             {
-                other.SendMessageUpwards("Brake");
+                if (WeakBrake)
+                {
+                    other.SendMessageUpwards("WeakBrake");
+                }
+                else
+                {
+                    other.SendMessageUpwards("Brake");
+                }
             }
             other.SendMessageUpwards("ImpulseOn");
         }
